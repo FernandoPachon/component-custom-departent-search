@@ -1,0 +1,13 @@
+{
+  categories(treeLevel:2){
+    id,
+    name,
+    slug,
+    children{
+       id,
+      name,
+    	slug
+
+    }
+  }
+}

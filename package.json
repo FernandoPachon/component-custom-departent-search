@@ -1,5 +1,4 @@
 {
-  "version": "0.0.1",
   "name": "custom-departament-search",
   "private": true,
   "license": "UNLICENSED",
@@ -9,13 +8,17 @@
     "lint:locales": "intl-equalizer",
     "test": "cd ./react && yarn test"
   },
-  "intl-equalizer": {
-    "referenceLocale": "en",
-    "localeDirectory": "messages"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
       "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,graphql,gql}": [
       "prettier --write"
     ],
     "*.json": [
@@ -36,5 +39,10 @@
     "prettier": "^2.2.0",
     "typescript": "^3.9.6",
     "@vtex/danger": "^0.2.7"
+  },
+  "version": "0.0.1",
+  "intl-equalizer": {
+    "referenceLocale": "en",
+    "localeDirectory": "messages"
   }
 }

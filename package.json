@@ -8,11 +8,6 @@
     "lint:locales": "intl-equalizer",
     "test": "cd ./react && yarn test"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
       "eslint --fix",

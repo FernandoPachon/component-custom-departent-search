@@ -1,6 +1,6 @@
 {
-  "name": "CHANGE_ME",
-  "version": "0.0.0",
+  "name": "custom-departament-search",
+  "version": "0.0.1",
   "scripts": {
     "test": "vtex-test-tools test"
   },
@@ -20,6 +20,13 @@
     "@vtex/tsconfig": "^0.4.4",
     "apollo-cache-inmemory": "^1.6.5",
     "graphql": "^14.6.0",
-    "typescript": "^3.9.6"
+    "itgloberspartnercl.custom-department-search": "https://fernandopachon--itgloberspartnercl.myvtex.com/_v/private/typings/linked/v1/itgloberspartnercl.custom-department-search@0.0.1+build1669344615/public/@types/itgloberspartnercl.custom-department-search",
+    "prop-type": "^0.0.1",
+    "prop-types": "^15.8.1",
+    "typescript": "3.9.7",
+    "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles",
+    "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime",
+    "vtex.store-components": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.163.3/public/@types/vtex.store-components",
+    "vtex.store-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.158.0/public/@types/vtex.store-graphql"
   }
 }

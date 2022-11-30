@@ -1,42 +1,54 @@
 import React from 'react';
+import { useCssHandles } from 'vtex.css-handles'
+import "./styles.css"
 
 type Props = {
- departments: [Category],
- handleSetSlug:any
+  departments: [Category],
+  handleSetSlug: any
 }
 
-type Category ={
-  id:number,
-  name:string,
-  slug:string
+type Category = {
+  id: number,
+  name: string,
+  slug: string
 }
 
-const DepartmentGroup =({ departments, handleSetSlug }:Props)=>{
-  console.log("mi grupo de departamento es:", departments);
+const DepartmentGroup = ({ departments, handleSetSlug }: Props) => {
+  console.log("mi grupo:", departments);
 
-  const onHandleSlug =(event:any)=>{
+  const onHandleSetSlug = (event: any) => {
     handleSetSlug(`${event.target.value}/$\{term\}&map=ft`)
-  }
+  };
 
-  const departmentOptions: any = departments.map((department:Category)=>{
+  const CSS_HANDLES = [
+    "department_group--container",
+    "department_group--element",
+    "department_group--option"
+  ]
+
+  const handles = useCssHandles(CSS_HANDLES)
+
+  const departmentOptions: any = departments.map((department: Category) => {
+
     return (
       <option
         value={department.slug}
         key={department.id}
       >
-          {department.name}
+        {department.name}
       </option>
     )
   })
   return (
-    <select
-    onChange={onHandleSlug}
-      defaultValue={"value0"}
-    >
-        <option disabled value="value0"> Seleccione una opción</option>
-        {departmentOptions}
-    </select>
-  )
-}
-
-export default DepartmentGroup;
+      <div className={handles["department_group--container"]}>
+        <select className={handles["department_group--element"]}
+          onChange={onHandleSetSlug}
+          defaultValue="value0"
+        >
+          <option className={handles["department_group--option"]} disabled value="value0">Ver categorías</option>
+          {departmentOptions}
+        </select>
+      </div>
+    )
+  }
+  export default DepartmentGroup;
